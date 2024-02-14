@@ -12,7 +12,7 @@ from io import BytesIO
 SCOPES = ['https://www.googleapis.com/auth/drive']
 
 # フォルダーIDを設定
-folder_id = '1Am3cbHuKTu8lAdlXLvwPBx0K_l7cWXQ4'
+folder_id = 'DriveFolderID'
 
 def upload_audio_file(file_path, mime_type='audio/mpeg'):
     creds = None
