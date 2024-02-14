@@ -1,7 +1,7 @@
 import requests
 import pathlib
 
-gpt_api_key = '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'
+gpt_api_key = 'OpenAI-secret-key'
 
 def get_speech_audio_data(text):
     api_url = 'https://api.openai.com/v1/audio/speech'
