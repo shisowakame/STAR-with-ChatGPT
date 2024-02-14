@@ -2,7 +2,7 @@ import requests
 import json
 
 # 環境変数からAPIキーを取得するために追加
-api_key = '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'
+api_key = 'OpenAI-secret-key'
 
 def gpt_request_completion(messages):
     api_url = 'https://api.openai.com/v1/chat/completions'
@@ -20,7 +20,6 @@ def gpt_request_completion(messages):
         try:
             response_data = response.json()
             if 'choices' in response_data and len(response_data['choices']) > 0:
-                # 'text' から 'message' オブジェクトの 'content' に修正
                 return response_data['choices'][0]['message']['content']
             else:
                 return {'error': 'No choices found in the response.'}
@@ -45,7 +44,6 @@ def gpt_request_completion(messages):
         try:
             response_data = response.json()
             if 'choices' in response_data and len(response_data['choices']) > 0:
-                # 応答からテキストを取得する修正
                 return response_data['choices'][0]['text']
             else:
                 return {'error': 'No choices found in the response.'}
