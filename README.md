@@ -1,6 +1,7 @@
 # STAR
 STAR(Summarize Text and Automate Recitatioin)は、Notionの記事のデータベースから、記事を内容を要約してAIに読み上げさせた音声ファイルをGoogleDriveに保存してPodcastとして配信します。  
-必要なもの  
+自分のpodcastチャンネルで増えていくブックマークを消化します。毎朝定刻に記事を5個配信するスクリプトなどと組み合わせて効率的な時間を過ごせます。  
+必要なもの(APIによってはお金がかかります。)  
 ・OpenAI-API-key　　
 ・Diffbot-APIトークン  
 ・GoogleDriveのフォルダID
