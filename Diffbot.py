@@ -3,8 +3,8 @@ import json
 
 def get_article_with_Diffbots(target_url):
     api_url = "https://api.diffbot.com/v3/analyze"
-    #target_url = "http://nazology.net/archives/145043"  # 解析対象の URL
-    token = "e7e6672af6419c2fe9a35e11503113f1"  # Diffbot API トークン
+    #target_url = "http://target/URL"  # 解析対象の URL
+    token = "DiffbotAPItoken"  # Diffbot API トークン
 
     url = f"{api_url}?token={token}&url={target_url}"
 
@@ -38,7 +38,7 @@ def get_article_with_Diffbots(target_url):
     return title,text
 
 if __name__ == "__main__":
-    target_url = "http://nazology.net/archives/145043"
+    target_url = "http://target/URL"
     title,text = get_article_with_Diffbots(target_url)
     print(f"タイトル: {title}")
     print(f"本文: {text[:8000]}...")  # 本文の最初の8000文字を表示
