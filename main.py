@@ -7,9 +7,9 @@ from TextToSpeech import get_speech_audio_data
 from GetRedirect import get_redirect
 from Diffbot import get_article_with_Diffbots
 
-folder_id='1Am3cbHuKTu8lAdlXLvwPBx0K_l7cWXQ4' #GoogleDriveフォルダアドレス
+folder_id='DrivefolderID' #GoogleDriveフォルダアドレス
 
-url="https://nazology.net/archives/122877" #要約したいURL
+url="https://target/URL" #要約したいURL
 
 redirect_url = get_redirect(url)
 #article = get_article(reurl)
