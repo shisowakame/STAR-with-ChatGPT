@@ -9,6 +9,6 @@ Notionの記事DBから、記事を内容を要約してAIに読み上げさせ�
 ・NotionデータベースID  
 ・token.json(GoogleDriveAPI)  
 ・credential.json(GoogleDriveAPI)  
-”””
+```
 pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib --user
-”””
+```
