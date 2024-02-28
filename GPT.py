@@ -11,7 +11,7 @@ def gpt_request_completion(messages):
         'Content-Type': 'application/json'
     }
     payload = {
-        'model': 'gpt-3.5-turbo',
+        'model': 'gpt-3.5-turbo-0125',
         'messages': messages
     }
 
@@ -20,6 +20,7 @@ def gpt_request_completion(messages):
         try:
             response_data = response.json()
             if 'choices' in response_data and len(response_data['choices']) > 0:
+                # 'text' から 'message' オブジェクトの 'content' に修正
                 return response_data['choices'][0]['message']['content']
             else:
                 return {'error': 'No choices found in the response.'}
@@ -44,6 +45,7 @@ def gpt_request_completion(messages):
         try:
             response_data = response.json()
             if 'choices' in response_data and len(response_data['choices']) > 0:
+                # 応答からテキストを取得する修正
                 return response_data['choices'][0]['text']
             else:
                 return {'error': 'No choices found in the response.'}
@@ -55,11 +57,11 @@ def gpt_request_completion(messages):
 
 def gpt_summarize(title, article):
     system_prompt = (
-        "与えられた文章の要約を,600字のですます調の日本語で出力してください。 \n"
+        "与えられた文章の要約を,800字のですます調の日本語で出力してください。 \n"
         "レスポンスは必ず以下のJSONフォーマットで返します。\n"
         "{'title':'記事のタイトルの日本語訳', 'summary':'記事の要約'}"
     )
-    user_prompt = f"title: {title}\nbody: {article[:3000]}"
+    user_prompt = f"title: {title}\nbody: {article[:14500]}"
 
     response = gpt_request_completion([
         {"role": "system", "content": system_prompt},
