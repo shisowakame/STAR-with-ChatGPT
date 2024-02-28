@@ -48,3 +48,17 @@ def mark_items_as_read(database_id, NOTION_TOKEN, items):
                 }
             }
         )
+if __name__ == "__main__":
+    database_id = 'Notion_database'
+    NOTION_TOKEN = "Notion_token"
+    
+    # 未読項目の取得と表示
+    unread_items_with_ids = fetch_unread_items_with_url(database_id, NOTION_TOKEN)
+    print("未読項目（更新前）:")
+    for item in unread_items_with_ids:
+        print(f'Title: {item["title"]}, URL: {item["url"]}')
+    
+    # 未読項目を既読に更新
+    mark_items_as_read(database_id, NOTION_TOKEN, unread_items_with_ids)
+    
+    print("更新後の項目を既読にしました。")
