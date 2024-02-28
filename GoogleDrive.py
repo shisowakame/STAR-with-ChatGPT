@@ -16,8 +16,10 @@ folder_id = 'DriveFolderID'
 
 def upload_audio_file(file_path, mime_type='audio/mpeg'):
     creds = None
+    # トークンファイルが存在するか確認
     if os.path.exists("token.json"):
         creds = Credentials.from_authorized_user_file("token.json", SCOPES)
+    # トークンが無効な場合は更新または新規認証を行う
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
@@ -31,7 +33,7 @@ def upload_audio_file(file_path, mime_type='audio/mpeg'):
     try:
         service = build("drive", "v3", credentials=creds)
 
-        # ファイル名を設定
+        # ファイル名を現在の日時から生成
         file_name = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + '.mp3'
 
         # ファイルのメタデータを設定
@@ -50,4 +52,3 @@ def upload_audio_file(file_path, mime_type='audio/mpeg'):
 
     except HttpError as error:
         print(f"An error occurred: {error}")
-
