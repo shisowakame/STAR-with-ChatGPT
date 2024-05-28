@@ -1,5 +1,6 @@
 import requests
 import pathlib
+from GoogleDrive import upload_audio_file 
 
 gpt_api_key = 'OpenAI-secret-key'
 
@@ -49,6 +50,7 @@ if __name__ == "__main__":
         with open('output.mp3', 'wb') as audio_file:
             audio_file.write(audio_data)
         print('音声データをoutput.mp3に保存しました。')
+        upload_audio_file(audio_data)
     else:
         print('音声データの取得に失敗しました。')
 
