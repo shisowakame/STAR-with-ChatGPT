@@ -23,7 +23,7 @@ python3 main.py
 ```
 <br>
 
-**成果物**<br>英語の文章も日本語で要約してくれます。<br>
-https://podcasters.spotify.com/pod/show/shisowakame/episodes/TikTok--e2kftg6
-<br>モデルをGPT-3.5-turboにすれば、contextの上限も踏まえて一回の音声ファイル生成にかかる金額は約1.5円です！<br>
+**成果物**<br>https://podcasters.spotify.com/pod/show/shisowakame/episodes/TikTok--e2kftg6
+<br><br>英語の文章も日本語で要約してくれます。<br>
+モデルをGPT-3.5-turboにすれば、contextの上限も踏まえて一回の音声ファイル生成にかかる金額は約1.5円です！<br>
 安いモデルを使用して多少の読み間違えはこっちで修正する使い方もしやすいようにつくったので、読み上げ文を平仮名にするなどして教えてあげてください。<br>
