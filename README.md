@@ -28,3 +28,5 @@ python3 main.py
 安いモデルを使用して多少の読み間違えはこっちで修正する使い方もしやすいようにつくったので、読み上げ文を平仮名にするなどして教えてあげてください。<br>
 
 https://podcasters.spotify.com/pod/show/shisowakame/episodes/TikTok--e2kftg6
+
+[[https://spotify-github-profile.vercel.app/api/view.svg?uid=31wgx435g4plc73v5asqbvho4rru&redirect=true][https://spotify-github-profile.vercel.app/api/view.svg?uid=31wgx435g4plc73v5asqbvho4rru&cover_image=true&theme=default&show_offline=true&background_color=121212&interchange=true)]]
